@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<title>화상수업</title>
+<link href="../css/common.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="header">
+		<div class="left">
+			<button type="button" class="btn_prev"></button>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="meeting_join">
+			<div class="con_tit_area">
+				<div class="tit">수업 참여하기</div>
+			</div>
+
+			<div class="info_txts">
+				<dl>
+					<dt>수업명</dt>
+					<dd>수업명을입력합니다.</dd>
+				</dl>
+			</div>
+
+			<div class="my_view">
+				<!-- camera ON -->
+				<div class="video">
+					<img src="../img/thumb.png" width="100%" height="100%" alt="">
+				</div>
+
+				<!-- camera OFF / 프로필사진 O
+				<div class="profile" style="background-color:#c58cff">
+					<img src="../img/thumb.png" alt="">
+				</div> -->
+
+				<!-- camera OFF / 프로필사진 X
+				<div class="profile" style="background-color:#c58cff">
+					<span class="nick">스테파니</span>
+				</div> -->
+			</div>
+
+			<div class="view_controls">
+				<button type="button" class="camera on"></button>
+				<button type="button" class="mic on"></button>
+				<button type="button" class="convert"></button>
+			</div>
+
+			<button type="button" class="btn_start">수업 시작 하기</button>
+		</div>
+	</div>
+</div>
+
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	/* 기능 사용여부 toggle btn */
+	toggleBtn( '.meeting_join .view_controls .camera' );
+	toggleBtn( '.meeting_join .view_controls .mic' );
+
+});
+</script>
+
+</body>
+</html>

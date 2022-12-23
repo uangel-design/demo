@@ -1,0 +1,223 @@
+@charset "utf-8";
+/*============================================================
+Base
+=============================================================*/
+/* noto-sans-kr - latin_korean */
+@font-face {
+	font-family:'Noto Sans KR';font-style:normal;font-weight:400;
+	src:local(''),
+		url('../fonts/noto-sans-kr-v13-latin_korean-regular.woff2') format('woff2'),
+		url('../fonts/noto-sans-kr-v13-latin_korean-regular.woff') format('woff'),
+		url('../fonts/noto-sans-kr-v13-latin_korean-regular.ttf') format('truetype'),
+		url('../fonts/noto-sans-kr-v13-latin_korean-regular.svg#NotoSansKR') format('svg');
+}
+@font-face {
+	font-family:'Noto Sans KR';font-style:normal;font-weight:500;
+	src:local(''),
+		url('../fonts/noto-sans-kr-v13-latin_korean-500.woff2') format('woff2'),
+		url('../fonts/noto-sans-kr-v13-latin_korean-500.woff') format('woff'),
+		url('../fonts/noto-sans-kr-v13-latin_korean-500.ttf') format('truetype'),
+		url('../fonts/noto-sans-kr-v13-latin_korean-500.svg#NotoSansKR') format('svg');
+}
+@font-face {
+	font-family:'Noto Sans KR';font-style:normal;font-weight:700;
+	src:local(''),
+		url('../fonts/noto-sans-kr-v13-latin_korean-700.woff2') format('woff2'),
+		url('../fonts/noto-sans-kr-v13-latin_korean-700.woff') format('woff'),
+		url('../fonts/noto-sans-kr-v13-latin_korean-700.ttf') format('truetype'),
+		url('../fonts/noto-sans-kr-v13-latin_korean-700.svg#NotoSansKR') format('svg');
+}
+/* reset */
+*:focus{outline:none !important}
+html,body{width:100%;height:100%;-webkit-touch-callout:none;-webkit-user-select:none;-webkit-text-size-adjust:none}
+body,div,p,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,table,th,td,pre,form,fieldset,legend,input,textarea,button,select,blockquote{margin:0;padding:0;}
+body,input,textarea,select,button,td,th,h1,h2,h3,h4,h5,h6{font-family:'Noto Sans KR','돋움',Dotum,arial,Helvetica,sans-serif;font-size:14px;color:#1d1d1d;font-weight:400;line-height:20px}
+img,fieldset,button,iframe{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+address,caption,cite,code,dfn,em,var{font-style:normal}
+table{width:100%;border-collapse:collapse;border-spacing:0}
+caption{visibility:hidden;width:0;height:0;font-size:0;line-height:0}
+legend{display:block;overflow:hidden;visibility:hidden;position:absolute;top:-1000em;left:0}
+button{border:0 none;background-color:transparent}
+strong{font-weight:400}
+img{vertical-align:top}
+a{color:#1d1d1d;text-decoration:none}
+a:hover,a:link,a:visited,a:active,a:focus{text-decoration:none}
+input[type='text'],input[type='password'],input[type='number'],input[type='tel'],input[type='email'],input[type='date'],input[type='submit'],input[type='search']{-webkit-appearance:none;border-radius:0}
+button,html input[type='button'],input[type='submit'],input[type='reset'],input[type='file']{-webkit-appearance:button;border-radius:0;cursor:pointer}
+textarea {resize:none;}
+a,button,input,textarea{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.hide{display:block;overflow:hidden;visibility:hidden;position:absolute;top:-1000em;left:0}
+/* 여백 */
+.mt10 {margin-top:10px;}
+.mt20 {margin-top:20px;}
+.mt30 {margin-top:30px;}
+/* btn */
+.btn {width:100%;padding:14px 0;border-width:1px;border-style:solid;border-color:transparent;border-radius:2px;font-size:16px;line-height:26px;text-align:center;vertical-align:top;}
+.btn.btn_white {border-color:#0066ff;background-color:#fff;color:#0066ff;}
+.btn.btn_blue {background-color:#0066ff;color:#fff;}
+.btn.btn_start:before {content:'';display:inline-block;width:26px;height:26px;margin-right:8px;background:url('../img/camera.svg') no-repeat;vertical-align:top;}
+.btn.btn_join:before {content:'';display:inline-block;width:26px;height:26px;margin-right:8px;vertical-align:top;}
+.btn.btn_blue.btn_join:before {background:url('../img/plus.svg') no-repeat;}
+.btn.btn_white.btn_join:before {background:url('../img/plus_on.svg') no-repeat;}
+/* input */
+::-webkit-input-placeholder {color:#b5b5b5;}
+.ipt_txt {border:1px solid #d9d9d9;border-radius:2px;}
+.ipt_txt input {width:100%;height:24px;border:0;background-color:transparent;font-size:14px;color:#1d1d1d;line-height:24px;}
+.ipt_txt.ipt_focus {border-color:#1d1d1d;}
+.ipt_field .ipt_txt {padding:16px 20px;}
+.ipt_field2 .before_txt {padding-bottom:10px;font-size:14px;color:#888;line-height:20px;}
+.ipt_field2 .ipt_txt {padding:16px 20px 20px 20px;}
+.ipt_field2 .ipt_txt input {font-size:18px;}
+
+/*============================================================
+Layout
+=============================================================*/
+.wrapper {position:relative;height:100%;}
+.header {position:fixed;top:0;left:0;z-index:2;width:100%;height:60px;background-color:#fff;}
+.header .left {position:absolute;top:0;left:0;}
+.header .btn_prev {float:left;width:60px;height:60px;}
+.header .btn_prev:after {content:'';display:inline-block;width:20px;height:20px;margin:20px;background:url('../img/prev.svg') no-repeat;}
+.header .btn_close {float:left;width:60px;height:60px;}
+.header .btn_close:after {content:'';display:inline-block;width:20px;height:20px;margin:20px;background:url('../img/close.svg') no-repeat;}
+.header .btn_member {position:relative;float:left;width:60px;height:60px;}
+.header .btn_member:after {content:'';display:inline-block;width:20px;height:20px;margin:20px;background:url('../img/people.svg') no-repeat;}
+.header .btn_member .count {position:absolute;top:17px;left:38px;font-size:12px;color:#fff;line-height:14px;}
+.header .tit {overflow:hidden;padding:18px 60px;font-size:18px;line-height:24px;font-weight:500;text-align:center;text-overflow:ellipsis;white-space:nowrap;}
+.header .tit .count {color:#b5b5b5;letter-spacing:-0.5px;}
+.header .right_ic {display:flex;justify-content:center;}
+.header .right_ic .ellipsis {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.header .right_ic .ic_arrow_down {display:inline-block;margin:11px 0 0 6px;border:4px solid transparent;border-bottom:0;border-top-color:#fff;vertical-align:top;}
+.wrapper.bg_black {background-color:#1d1d1d;}
+.wrapper.bg_black .header {background-color:#1d1d1d;}
+.wrapper.bg_black .header .tit {font-size:16px;color:#fff;}
+.wrapper.bg_black .header .tit a {color:#fff;}
+.container {position:relative;min-height:calc(100vh - 80px);padding:60px 20px 20px 20px;}
+.con_tit_area {padding:40px 0 30px 0;}
+.con_tit_area .tit {font-size:26px;color:#000;line-height:30px;font-weight:700;}
+/*============================================================
+page
+=============================================================*/
+/* splash */
+.splash {width:100%;height:100%;background:url('../img/logo_seoul.svg') center center no-repeat;}
+/* main */
+.main .intro {display:flex;align-items:center;justify-content:center;height:360px;background:url('../img/bg_main.svg') center top no-repeat;background-size:cover;}
+.main .intro .txt {font-size:18px;color:#fff;line-height:24px;text-align:center;}
+.main .begin {padding:26px 20px;}
+.main .btns .btn + .btn {margin-top:20px;}
+/* 수업 시작/참여 하기 */
+.meeting_begin .btns .btn_copy {font-size:14px;}
+.meeting_begin .btns .btn + .btn {margin-top:20px;}
+/* 로그인 */
+.login .brend {height:36px;margin-bottom:45px;background:url('../img/logo_seoul.svg') top center no-repeat;background-size:contain;}
+/* 회의 참여하기 */
+.meeting_join .info_txts {padding:16px 20px;border:1px solid #d9d9d9;border-radius:2px;background-color:#f2f3f6;}
+.meeting_join .info_txts dl + dl {margin-top:16px;}
+.meeting_join .info_txts dt {padding-bottom:4px;color:#888;}
+.meeting_join .info_txts dd {overflow:hidden;font-size:16px;line-height:24px;text-overflow:ellipsis;white-space:nowrap;}
+.meeting_join .my_view {overflow:hidden;width:228px;height:228px;margin:94px auto 0 auto;border-radius:2px;background-color:#434343;text-align:center;}
+.meeting_join .my_view .video {width:100%;height:100%;}
+.meeting_join .my_view .profile {position:relative;overflow:hidden;width:96px;height:96px;margin:66px;border-radius:48px;}
+.meeting_join .my_view .profile .nick {display:block;overflow:hidden;padding:33px 5px;font-size:20px;color:#fff;line-height:30px;font-weight:700;text-overflow:ellipsis;white-space:nowrap;}
+.meeting_join .my_view .profile img {position:absolute;top:0;left:50%;width:auto;height:100%;transform:translate(-50%,0);}
+.meeting_join .view_controls {margin-top:12px;text-align:center;}
+.meeting_join .view_controls button {width:56px;height:56px;margin:0 4px;}
+.meeting_join .view_controls button:after {content:'';display:inline-block;width:26px;height:26px;margin:15px;}
+.meeting_join .view_controls .camera:after {background:url('../img/camera_off2.svg') no-repeat;}
+.meeting_join .view_controls .camera.on:after {background:url('../img/camera_on.svg') no-repeat;}
+.meeting_join .view_controls .mic:after {background:url('../img/mic_off2.svg') no-repeat;}
+.meeting_join .view_controls .mic.on:after {background:url('../img/mic_on.svg') no-repeat;}
+.meeting_join .view_controls .convert:after {background:url('../img/convert_on.svg') no-repeat;}
+.meeting_join .view_controls .subtitles:after {background:url('../img/subtitles_off2.svg') no-repeat;}
+.meeting_join .view_controls .subtitles.on:after {background:url('../img/subtitles_on.svg') no-repeat;}
+.meeting_join .btn_start {width:100%;margin-top:26px;padding:15px 0;border-radius:2px;background-color:#0066ff;font-size:16px;color:#fff;line-height:26px;text-align:center;vertical-align:top;}
+.meeting_join .btn_start:before {content:'';display:inline-block;width:26px;height:26px;margin-right:8px;background:url('../img/camera.svg') no-repeat;vertical-align:top;}
+/* 회의실 */
+.meeting_room .member_view {display:flex;flex-wrap:wrap;align-content:center;width:328px;margin:0 auto;padding:6px 0 68px 0;min-height:calc(100vh - 70px - 92px);}
+.meeting_room .member_view li {position:relative;width:156px;height:156px;margin:4px;background-color:#434343;}
+.meeting_room .member_view .video {width:100%;height:100%;}
+.meeting_room .member_view .profile {position:relative;overflow:hidden;width:60px;height:60px;margin:48px;border-radius:30px;}
+.meeting_room .member_view .profile .nick {display:block;overflow:hidden;padding:18px 5px;font-size:16px;color:#fff;line-height:24px;font-weight:700;text-align:center;text-overflow:ellipsis;white-space:nowrap;}
+.meeting_room .member_view .profile img {position:absolute;top:0;left:50%;width:auto;height:100%;transform:translate(-50%,0);}
+.meeting_room .member_view .name {position:absolute;bottom:10px;left:10px;padding:3px 10px;border-radius:2px;background-color:rgba(0,0,0,.6);font-size:12px;color:#fff;}
+.meeting_room .member_view li.speak:before {content:'';position:absolute;top:0;left:0;width:100%;height:100%;border:3px solid #0066ff;box-sizing:border-box;}
+.meeting_room .member_view li.speak:after {content:'';position:absolute;top:4px;right:4px;width:30px;height:32px;background:url('../img/speak.svg') no-repeat;}
+.meeting_room.subtitle_on .member_view {min-height:calc(100vh - 70px - 152px);padding:6px 0 128px 0;}
+.meeting_room .member_view.col {display:flex;flex-wrap:nowrap;justify-content:center;flex-direction:column;align-content:stretch;align-items:center;width:auto;margin:0;padding:10px 0 72px 0;}
+.meeting_room .member_view.col li {width:276px;height:276px;margin:0;}
+.meeting_room .member_view.col li + li {margin-top:8px;}
+.meeting_room .member_view.col .profile {width:120px;height:120px;margin:78px;border-radius:60px;}
+.meeting_room .member_view.col .profile .nick {padding:42px 5px;font-size:24px;line-height:36px;}
+.meeting_room.subtitle_on .member_view.col {padding:10px 0 132px 0;}
+.meeting_room .subtitles_view {position:fixed;bottom:82px;left:0;z-index:1;display:none;width:100%;padding:12px 30px;background-color:rgba(29,29,29,.9);}
+.meeting_room.subtitle_on .subtitles_view {display:block;}
+.meeting_room .subtitles_view .txts {overflow:hidden;height:36px;font-size:12px;color:#fff;line-height:18px;}
+.meeting_room .view_controls {position:fixed;bottom:0;left:0;z-index:1;display:flex;justify-content:space-around;width:100%;padding:10px 10px 20px 10px;box-sizing:border-box;background-color:#1d1d1d;}
+.meeting_room .view_controls button {width:52px;height:52px;}
+.meeting_room .view_controls button:after {content:'';display:inline-block;width:26px;height:26px;margin:13px;}
+.meeting_room .view_controls .camera:after {background:url('../img/camera_off.svg') no-repeat;}
+.meeting_room .view_controls .camera.on:after {background:url('../img/camera_on.svg') no-repeat;}
+.meeting_room .view_controls .mic:after {background:url('../img/mic_off.svg') no-repeat;}
+.meeting_room .view_controls .mic.on:after {background:url('../img/mic_on.svg') no-repeat;}
+.meeting_room .view_controls .convert:after {background:url('../img/convert_on.svg') no-repeat;}
+.meeting_room .view_controls .subtitles:after {background:url('../img/subtitles_off.svg') no-repeat;}
+.meeting_room .view_controls .subtitles.on:after {background:url('../img/subtitles_on.svg') no-repeat;}
+.meeting_room .view_controls .call {border-radius:2px;background-color:#e84443;}
+.meeting_room .view_controls .call:after {background:url('../img/call.svg') no-repeat;}
+/* 참여자정보 */
+.meeting_member .view_controls {position:fixed;top:60px;left:0;z-index:1;width:100%;padding:29px 0;border-bottom:1px solid #d9d9d9;background-color:#fff;}
+.meeting_member .view_controls dl {display:flex;padding:0 20px;}
+.meeting_member .view_controls dt {flex:1;padding:3px 0;}
+.meeting_member .view_controls dl + dl {margin-top:28px;}
+.meeting_member .view_controls .btn_switch {display:inline-block;vertical-align:middle;}
+.meeting_member .view_controls .btn_switch * {vertical-align:middle;}
+.meeting_member .view_controls .btn_switch input[type="checkbox"] {width:0;height:0;opacity:0;}
+.meeting_member .view_controls .btn_switch .slider {position:relative;display:inline-block;width:50px;height:26px;border-radius:13px;background-color:#d9d9d9;-webkit-transition:.2s;transition:.2s;cursor:pointer;}
+.meeting_member .view_controls .btn_switch .slider .ball {position:absolute;left:2px;top:2px;display:block;width:22px;height:22px;border-radius:11px;background-color:#fff;-webkit-transition:.2s;transition:.2s;}
+.meeting_member .view_controls .btn_switch .slider .ball:before {content:'';display:block;width:6px;height:2px;margin:10px 8px;background-color:#d9d9d9;}
+.meeting_member .view_controls .btn_switch input:checked + .slider {background-color:#0066ff;}
+.meeting_member .view_controls .btn_switch input:checked + .slider .ball {-webkit-transform:translateX(24px);-ms-transform:translateX(24px);transform:translateX(24px);}
+.meeting_member .view_controls .btn_switch input:checked + .slider .ball:before {width:2px;height:2px;margin:8px;border:2px solid #0066ff;border-radius:3px;background-color:#fff;}
+.meeting_member .member_list {padding-top:107px;}
+.meeting_member .member_list li {display:flex;padding:8px 0;}
+.meeting_member .member_list .profile {position:relative;overflow:hidden;width:46px;height:46px;border-radius:23px;}
+.meeting_member .member_list .profile .nick {display:block;overflow:hidden;padding:13px 2px;color:#fff;font-weight:700;text-align:center;text-overflow:ellipsis;white-space:nowrap;}
+.meeting_member .member_list .profile img {position:absolute;top:0;left:50%;width:auto;height:100%;transform:translate(-50%,0);}
+.meeting_member .member_list .name {display:flex;flex:1;overflow:hidden;padding:13px 10px 13px 12px;font-size:16px;text-overflow:ellipsis;white-space:nowrap;}
+.meeting_member .member_list .name .ellipsis {overflow:hidden;padding-right:4px;text-overflow:ellipsis;white-space:nowrap;}
+.meeting_member .member_list .name .lv {display:inline-block;color:#888;}
+.meeting_member .member_list .controls {display:flex;width:112px;}
+.meeting_member .member_list .controls button {width:46px;height:46px;margin:0 5px;}
+.meeting_member .member_list .controls button:after {content:'';display:inline-block;width:26px;height:26px;margin:10px;}
+.meeting_member .member_list .controls .mic:after {background:url('../img/mic_off2.svg') no-repeat;}
+.meeting_member .member_list .controls .mic.on:after {background:url('../img/mic_on.svg') no-repeat;}
+.meeting_member .member_list .controls .camera:after {background:url('../img/camera_off2.svg') no-repeat;}
+.meeting_member .member_list .controls .camera.on:after {background:url('../img/camera_on.svg') no-repeat;}
+.meeting_member.host .member_list {padding-top:161px;}
+
+/*============================================================
+modal popup
+=============================================================*/
+body.modal_show {overflow:hidden;padding-right:17px;}
+.modal {position:fixed;top:0;right:0;bottom:0;left:0;z-index:1000;overflow-x:hidden;overflow-y:auto;display:none;height:100%;}
+.modal_backdrop {position:absolute;top:0;right:0;left:0;height:100%;background-color:rgba(0,0,0,.5);}
+.modal_dialog {position:relative;z-index:1000;opacity:0;margin:0 auto;transition:all .2s ease-out;}
+.modal.on .modal_dialog {opacity:1;}
+.modal.slide_up .modal_dialog {transform:translate(0,100%);}
+.modal.slide_up.on .modal_dialog {transform:translate(0,0);}
+/* 회의실 정보 */
+.modal_meeting_info .modal_content {padding:0 20px;border-radius:15px 15px 0 0;background-color:#fff;}
+.modal_meeting_info .modal_header {position:relative;border-bottom:1px solid #d9d9d9;}
+.modal_meeting_info .modal_header .tit {padding:25px 0;font-weight:700;}
+.modal_meeting_info .modal_header .btn_close {position:absolute;top:8px;right:-20px;width:54px;height:54px;}
+.modal_meeting_info .modal_header .btn_close:after {content:'';display:block;width:14px;height:14px;margin:20px;background:url('../img/close_s.svg') no-repeat;}
+.modal_meeting_info .info_txts {padding:30px 0 60px;}
+.modal_meeting_info .info_txts dt {padding-bottom:4px;color:#888;}
+.modal_meeting_info .info_txts dd {font-size:16px;line-height:24px;}
+.modal_meeting_info .info_txts dl.code {margin-top:30px;}
+.modal_meeting_info .info_txts dl.code dd {position:relative;}
+.modal_meeting_info .info_txts dl.code .num {display:block;padding-right:60px;}
+.modal_meeting_info .info_txts dl.code .btn_copy {position:absolute;top:-13px;right:3px;width:50px;height:50px;}
+.modal_meeting_info .info_txts dl.code .btn_copy:after {content:'';display:block;width:18px;height:20px;margin:15px 16px;background:url('../img/copy.svg') no-repeat;}
