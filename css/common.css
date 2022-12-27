@@ -101,7 +101,7 @@ Layout
 page
 =============================================================*/
 /* splash */
-.splash {width:100%;height:100%;background:url('../img/logo_seoul.svg') center center no-repeat;}
+.splash {width:100%;height:100%;background:url('../img/logo_seoul.png') center center no-repeat;background-size:180px 46px;}
 /* main */
 .main .intro {display:flex;align-items:center;justify-content:center;height:360px;background:url('../img/bg_main.svg') center top no-repeat;background-size:cover;}
 .main .intro .txt {font-size:18px;color:#fff;line-height:24px;text-align:center;}
@@ -167,6 +167,7 @@ page
 .meeting_room .view_controls .call {border-radius:2px;background-color:#e84443;}
 .meeting_room .view_controls .call:after {background:url('../img/call.svg') no-repeat;}
 /* 참여자정보 */
+.page_member {display:none;}
 .meeting_member .view_controls {position:fixed;top:60px;left:0;z-index:1;width:100%;padding:29px 0;border-bottom:1px solid #d9d9d9;background-color:#fff;}
 .meeting_member .view_controls dl {display:flex;padding:0 20px;}
 .meeting_member .view_controls dt {flex:1;padding:3px 0;}
@@ -196,6 +197,23 @@ page
 .meeting_member .member_list .controls .camera:after {background:url('../img/camera_off2.svg') no-repeat;}
 .meeting_member .member_list .controls .camera.on:after {background:url('../img/camera_on.svg') no-repeat;}
 .meeting_member.host .member_list {padding-top:161px;}
+/* 채팅 */
+.container_chatting {min-height:100%;padding:60px 0 147px 0;background-color:#eff5ff;box-sizing:border-box;}
+.chatting_board {padding:16px 16px 0 16px;}
+.chatting_board .date_divider {margin-bottom:16px;}
+.chatting_board .date_divider .date {font-size:10px;color:#888;line-height:18px;text-align:center;}
+.chatting_board .msg_receive {display:flex;flex-wrap:nowrap;align-items:end;padding:0 28px 16px 0;}
+.chatting_board .msg_receive .msg {padding:8px 16px;border-radius:16px 16px 16px 0;background-color:#fff;font-size:14px;color:#1d1d1d;line-height:20px;}
+.chatting_board .msg_receive .write {flex:1;margin-left:4px;font-size:10px;color:#888;line-height:16px;white-space:nowrap;}
+.chatting_board .msg_send {display:flex;flex-wrap:nowrap;align-items:end;padding:0 0 16px 28px;}
+.chatting_board .msg_send .msg {order:1;padding:8px 16px;border-radius:16px 16px 0 16px;background-color:#0066ff;font-size:14px;color:#fff;line-height:20px;}
+.chatting_board .msg_send .write {flex:1;margin-right:4px;font-size:10px;color:#888;line-height:16px;text-align:right;white-space:nowrap;} 
+.chatting_ipts {position:fixed;bottom:0;left:0;z-index:1;width:100%;padding:8px 20px;border-top:1px solid #e9ecef;background-color:#fff;box-sizing:border-box;}
+.chatting_ipts .ipt_txtarea {display:flex;align-items:end;padding:6px 8px 6px 16px;border:1px solid #e9ecef;border-radius:16px;background-color:#f8f9fa;}
+.chatting_ipts .ipt_txtarea textarea {flex:1;width:100%;height:22px;padding:3px 0;border:0;background-color:transparent;font-size:14px;color:#1d1d1d;line-height:22px;transition:all .2s ease-out;}
+.chatting_ipts .ipt_txtarea textarea:focus {height:110px;}
+.chatting_ipts .ipt_txtarea .btn_upload {width:28px;height:28px;margin-left:8px;background:url('../img/send.svg') no-repeat;}
+.chatting_ipts .ipt_txtarea textarea:focus + .btn_upload {background:url('../img/send_on.svg') no-repeat;}
 
 /*============================================================
 modal popup
@@ -207,6 +225,8 @@ body.modal_show {overflow:hidden;padding-right:17px;}
 .modal.on .modal_dialog {opacity:1;}
 .modal.slide_up .modal_dialog {transform:translate(0,100%);}
 .modal.slide_up.on .modal_dialog {transform:translate(0,0);}
+.modal.slide_down .modal_dialog {transform:translate(0,-100%);}
+.modal.slide_down.on .modal_dialog {transform:translate(0,0);}
 /* 회의실 정보 */
 .modal_meeting_info .modal_content {padding:0 20px;border-radius:15px 15px 0 0;background-color:#fff;}
 .modal_meeting_info .modal_header {position:relative;border-bottom:1px solid #d9d9d9;}

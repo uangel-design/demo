@@ -9,76 +9,116 @@
 <body>
 
 <div class="wrapper bg_black"> <!-- 검은색 배경 시 : class="bg_black" -->
-	<div class="header">
-		<div class="left">
-			<button type="button" class="btn_member"><span class="count">5</span></button>
+	<div class="page_room">
+		<div class="header">
+			<div class="left">
+				<button type="button" class="btn_member"><span class="count">5</span></button>
+			</div>
+			<div class="tit">
+				<a href="#" class="right_ic btn_meeting_info">
+					<span class="ellipsis">수업명</span>
+					<span class="ic_arrow_down"></span>
+				</a>
+			</div>
 		</div>
-		<div class="tit">
-			<a href="#" class="right_ic btn_meeting_info">
-				<span class="ellipsis">수업명</span>
-				<span class="ic_arrow_down"></span>
-			</a>
+
+		<div class="container">
+			<div class="meeting_room">
+				<ul class="member_view col"> <!-- 3인 이하시 : class="col" -->
+					<li>
+						<!-- camera ON -->
+						<div class="video">
+							<img src="../img/thumb.png" width="100%" height="100%" alt="">
+						</div>
+						<div class="name">나</div>
+					</li>
+
+					<li class="speak">
+						<!-- camera OFF / 프로필사진 O -->
+						<div class="profile" style="background-color:#c58cff">
+							<img src="../img/thumb.png" alt="">
+						</div>
+						<div class="name">이형준</div>
+					</li>
+
+					<li>
+						<!-- camera OFF / 프로필사진 X -->
+						<div class="profile" style="background-color:#c58cff">
+							<span class="nick">스테파니 리</span>
+						</div>
+						<div class="name">스테파니 리</div>
+					</li>
+				</ul>
+
+				<div class="view_controls">
+					<button type="button" class="camera"></button>
+					<button type="button" class="mic"></button>
+					<button type="button" class="convert"></button>
+					<button type="button" class="subtitles on"></button>
+					<button type="button" class="call"></button>
+				</div>
+			</div>
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="meeting_room">
-			<ul class="member_view col"> <!-- 3인 이하시 : class="col" -->
-				<li>
-					<!-- camera ON -->
-					<div class="video">
-						<img src="../img/thumb.png" width="100%" height="100%" alt="">
-					</div>
-					<div class="name">나</div>
-				</li>
+	<div class="page_member">
+		<div class="header">
+			<div class="left">
+				<button type="button" class="btn_close"></button>
+			</div>
+			<div class="tit">참여자정보 <span class="count">11</span></div>
+		</div>
 
-				<li class="speak">
-					<!-- camera OFF / 프로필사진 O -->
-					<div class="profile" style="background-color:#c58cff">
-						<img src="../img/thumb.png" alt="">
-					</div>
-					<div class="name">이형준</div>
-				</li>
+		<div class="container">
+			<div class="meeting_member">
+				<div class="view_controls">
+					<dl>
+						<dt>참가자 전체 카메라</dt>
+						<dd>
+							<label class="btn_switch">
+								<input type="checkbox" checked="checked">
+								<span class="slider"><span class="ball"></span></span>
+							</label>
+						</dd>
+					</dl>
+				</div>
 
-				<li>
-					<!-- camera OFF / 프로필사진 X -->
-					<div class="profile" style="background-color:#c58cff">
-						<span class="nick">스테파니 리</span>
-					</div>
-					<div class="name">스테파니 리</div>
-				</li>
-
-				<li>
-					<!-- camera ON -->
-					<div class="video">
-						<img src="../img/thumb.png" width="100%" height="100%" alt="">
-					</div>
-					<div class="name">나</div>
-				</li>
-
-				<li class="speak">
-					<!-- camera OFF / 프로필사진 O -->
-					<div class="profile" style="background-color:#c58cff">
-						<img src="../img/thumb.png" alt="">
-					</div>
-					<div class="name">이형준</div>
-				</li>
-
-				<li>
-					<!-- camera OFF / 프로필사진 X -->
-					<div class="profile" style="background-color:#c58cff">
-						<span class="nick">스테파니 리</span>
-					</div>
-					<div class="name">스테파니 리</div>
-				</li>
-			</ul>
-
-			<div class="view_controls">
-				<button type="button" class="camera"></button>
-				<button type="button" class="mic"></button>
-				<button type="button" class="convert"></button>
-				<button type="button" class="subtitles on"></button>
-				<button type="button" class="call"></button>
+				<ul class="member_list">
+					<li>
+						<div class="profile">
+							<img src="../img/thumb.png" alt="">
+						</div>
+						<div class="name">
+							<span class="ellipsis">박나은</span>
+							<span class="lv">(호스트)</span>
+						</div>
+					</li>
+					<li>
+						<div class="profile">
+							<img src="../img/thumb.png" alt="">
+						</div>
+						<div class="name">
+							<span class="ellipsis">김다연</span>
+							<span class="lv">(나)</span>
+						</div>
+						<div class="controls">
+							<button type="button" class="mic"></button>
+							<button type="button" class="camera on"></button>
+						</div>
+					</li>
+					<li>
+						<div class="profile" style="background-color:#8cbaff">
+							<span class="nick">스테파니 리</span>
+						</div>
+						<div class="name">
+							<span class="ellipsis">스테파니 리</span>
+						</div>
+						<div class="controls">
+							<button type="button" class="mic on"></button>
+							<button type="button" class="camera"></button>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -119,14 +159,35 @@ $(document).ready(function() {
 
 	$( window ).resize();
 
-	/* 기능 사용여부 toggle btn */
+	/* 회의 기능 사용여부 toggle btn */
 	toggleBtn( '.meeting_room .view_controls .camera' );
 	toggleBtn( '.meeting_room .view_controls .mic' );
+
+	/* 멤버 기능 사용여부 toggle btn */
+	toggleBtn( '.meeting_member .member_list .mic' );
+	toggleBtn( '.meeting_member .member_list .camera' );
 
 	/* 회의실 정보 모달 팝업 */
 	$( '.btn_meeting_info' ).click( function( e ) {
 		e.preventDefault();
 		modalOpen( '.modal_meeting_info', 'bottom' ); /* ( 이름, 위치 ) */
+	});
+
+	/* 참여자 정보 화면 이동 */
+	$( '.page_room .btn_member' ).click( function( e ) {
+		e.preventDefault();
+		$( '.page_room' ).hide();
+		$( '.page_member' ).show();
+		$( '.wrapper' ).removeClass( 'bg_black' ).css( 'height', 'auto' );
+	});
+
+	/* 회의실 화면 이동 */
+	$( '.page_member .btn_close' ).click( function( e ) {
+		e.preventDefault();
+		$( '.page_room' ).show();
+		$( '.page_member' ).hide();
+		$( '.wrapper' ).addClass( 'bg_black' );
+		$( window ).resize();
 	});
 
 });
