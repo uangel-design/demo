@@ -181,7 +181,7 @@ page
 .meeting_member .view_controls .btn_switch input:checked + .slider {background-color:#0066ff;}
 .meeting_member .view_controls .btn_switch input:checked + .slider .ball {-webkit-transform:translateX(24px);-ms-transform:translateX(24px);transform:translateX(24px);}
 .meeting_member .view_controls .btn_switch input:checked + .slider .ball:before {width:2px;height:2px;margin:8px;border:2px solid #0066ff;border-radius:3px;background-color:#fff;}
-.meeting_member .member_list {padding-top:107px;}
+.meeting_member .member_list {padding-top:22px;}
 .meeting_member .member_list li {display:flex;padding:8px 0;}
 .meeting_member .member_list .profile {position:relative;overflow:hidden;width:46px;height:46px;border-radius:23px;}
 .meeting_member .member_list .profile .nick {display:block;overflow:hidden;padding:13px 2px;color:#fff;font-weight:700;text-align:center;text-overflow:ellipsis;white-space:nowrap;}
@@ -198,6 +198,7 @@ page
 .meeting_member .member_list .controls .camera.on:after {background:url('../img/camera_on.svg') no-repeat;}
 .meeting_member.host .member_list {padding-top:161px;}
 /* 채팅 */
+.page_chatting {display:none;}
 .container_chatting {min-height:100%;padding:60px 0 147px 0;background-color:#eff5ff;box-sizing:border-box;}
 .chatting_board {padding:16px 16px 0 16px;}
 .chatting_board .date_divider {margin-bottom:16px;}
