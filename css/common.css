@@ -199,7 +199,7 @@ page
 .meeting_member.host .member_list {padding-top:161px;}
 /* 채팅 */
 .page_chatting {display:none;}
-.container_chatting {min-height:100%;padding:60px 0 147px 0;background-color:#eff5ff;box-sizing:border-box;}
+.container_chatting {min-height:calc(100vh - 207px);padding:60px 0 147px 0;background-color:#eff5ff;}
 .chatting_board {padding:16px 16px 0 16px;}
 .chatting_board .date_divider {margin-bottom:16px;}
 .chatting_board .date_divider .date {font-size:10px;color:#888;line-height:18px;text-align:center;}
