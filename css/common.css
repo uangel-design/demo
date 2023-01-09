@@ -54,6 +54,7 @@ a,button,input,textarea{-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .mt10 {margin-top:10px;}
 .mt20 {margin-top:20px;}
 .mt30 {margin-top:30px;}
+.mt40 {margin-top:40px;}
 /* btn */
 .btn {width:100%;padding:14px 0;border-width:1px;border-style:solid;border-color:transparent;border-radius:2px;font-size:16px;line-height:26px;text-align:center;vertical-align:top;}
 .btn.btn_white {border-color:#0066ff;background-color:#fff;color:#0066ff;}
@@ -71,6 +72,11 @@ a,button,input,textarea{-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .ipt_field2 .before_txt {padding-bottom:10px;font-size:14px;color:#888;line-height:20px;}
 .ipt_field2 .ipt_txt {padding:16px 20px 20px 20px;}
 .ipt_field2 .ipt_txt input {font-size:18px;}
+/* radio */
+.ipt_radio {position:relative;cursor:pointer;}
+.ipt_radio input {position:absolute;top:0;left:0;opacity:0;width:20px;height:20px;margin:0;}
+.ipt_radio input + i {display:inline-block;width:16px;height:16px;margin-top:2px;margin-right:6px;border:1px solid #d9d9d9;border-radius:50%;vertical-align:top;}
+.ipt_radio input:checked + i {width:6px;height:6px;border:6px solid #0066ff;}
 
 /*============================================================
 Layout
@@ -103,6 +109,11 @@ page
 /* splash */
 .splash {width:100%;height:100%;background:url('../img/logo_seoul.png') center center no-repeat;background-size:180px 46px;}
 /* main */
+.main .tools {position:relative;}
+.main .tools .profile {position:absolute;top:20px;right:20px;overflow:hidden;display:block;width:36px;height:36px;border:1px solid #fff;border-radius:19px;}
+.main .tools .profile img {position:absolute;top:0;left:50%;width:auto;height:100%;transform:translate(-50%,0);}
+.main .tools .profile .nick {display:block;overflow:hidden;padding:8px 0;font-size:12px;color:#fff;text-align:center;text-overflow:ellipsis;white-space:nowrap;}
+.main .tools .profile.logout {border:0;}
 .main .intro {display:flex;align-items:center;justify-content:center;height:360px;background:url('../img/bg_main.svg') center top no-repeat;background-size:cover;}
 .main .intro .txt {font-size:18px;color:#fff;line-height:24px;text-align:center;}
 .main .begin {padding:26px 20px;}
